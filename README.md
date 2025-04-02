@@ -1,7 +1,21 @@
-Benchmark GCS C++ Vs GRPC client
+# Benchmark: GCS C++ JSON vs gRPC Client
 
-Ensure that you have the storage_client and store_client_grpc libs
+This benchmark compares performance between the Google Cloud Storage (GCS) C++ client using the JSON REST API and the gRPC client.
 
-1. Run make
-2. cd build
-3. ./run_benchmark <<bucket>> <<object>> <<times>> <<cred.json>>
+## Prerequisites
+
+Ensure the following libraries are available on your system:
+
+https://github.com/googleapis/google-cloud-cpp 
+
+- `storage_client`
+- `storage_client_grpc`
+
+## Build Instructions
+
+1. Compile the project with make
+   make
+## Run Benchmark
+cd build/
+
+./run_benchmark <bucket-name> <object-name> <no-of-iterations> <path-to-credentials.json>
