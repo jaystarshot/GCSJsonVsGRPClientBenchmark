@@ -14,8 +14,12 @@ https://github.com/googleapis/google-cloud-cpp
 ## Build Instructions
 
 1. Compile the project with make
+   ```
    make
+   ```
 ## Run Benchmark
 cd build/
 
+```
 ./run_benchmark <bucket-name> <object-name> <no-of-iterations> <path-to-credentials.json>
+```
