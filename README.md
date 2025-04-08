@@ -26,7 +26,7 @@ https://github.com/googleapis/google-cloud-cpp
 cd build/
 
 ```
-./benchmark <bucket-name> <object-name> <no-of-iterations> <path-to-credentials.json>
+./benchmark <bucket-name> <object-name> <no-of-iterations> 
 ```
 
 
