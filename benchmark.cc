@@ -184,26 +184,12 @@ int main(int argc, char* argv[]) {
     int numTimes = 5;
     auto options = gc::Options{};
     std::cout << "Args" << argc << "\n";
-    if (argc == 5) {
-        // std::cerr << "Usage: " << argv[0] << " <bucket-name> <object-name> <num-times> <json-cred>\n";
+    if (argc == 4) {
+        // std::cerr << "Usage: " << argv[0] << " <bucket-name> <object-name> <num-times>";
         // return 1;
         bucket = argv[1];
         object_name = argv[2];
         numTimes = std::stoi(argv[3]);
-
-
-        auto credFile = argv[4];
-        std::cout << "Using Json Creds\n" << credFile << "\n";
-        std::ifstream jsonFile(credFile, std::ios::in);
-        if (!jsonFile.is_open()) {
-            std::cerr << "Error opening credentials file: " << credFile << "\n";
-            return 1;
-        }
-        std::stringstream credsBuffer;
-        credsBuffer << jsonFile.rdbuf();
-        auto creds = credsBuffer.str();
-        auto credentials = gc::MakeServiceAccountCredentials(std::move(creds));
-        options.set<gc::UnifiedCredentialsOption>(credentials);
         // For test
     }else {
         bucket = "test1-gcs";
