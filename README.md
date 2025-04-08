@@ -23,3 +23,7 @@ cd build/
 ```
 ./benchmark <bucket-name> <object-name> <no-of-iterations> <path-to-credentials.json>
 ```
+
+
+Note: For direct_path testing in GRPC in GCP we must set the GOOGLE_APPLICATION_CREDENTIALS to the <path-to-credentials.json> 
+
