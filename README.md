@@ -2,6 +2,11 @@
 
 This benchmark compares performance between the Google Cloud Storage (GCS) C++ client using the JSON REST API and the gRPC client.
 
+Note: we must set the **GOOGLE_APPLICATION_CREDENTIALS** env variable to the **<path-to-credentials.json>** before testing. 
+This makes sure that GCS + GRPC direct-path connectivity is tested as well
+
+
+
 ## Prerequisites
 
 Ensure the following libraries are available on your system:
@@ -21,5 +26,8 @@ https://github.com/googleapis/google-cloud-cpp
 cd build/
 
 ```
-./benchmark <bucket-name> <object-name> <no-of-iterations> <path-to-credentials.json>
+./benchmark <bucket-name> <object-name> <no-of-iterations> 
 ```
+
+
+
